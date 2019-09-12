@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "./image";
 import "./App.css";
 
 function App() {
@@ -8,6 +9,8 @@ function App() {
         Read through the instructions in the README.md file to build your NASA
         app! Have fun 🚀!
       </p>
+
+      <Image />
     </div>
   );
 }
