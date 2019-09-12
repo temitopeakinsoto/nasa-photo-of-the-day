@@ -1,9 +1,10 @@
 import React from "react";
 
-function Title() {
+function Title(props) {
+    const {titleValue} = props;
     return (
         <div>
-            Hello there title
+            {titleValue};
         </div>
     );
 }
