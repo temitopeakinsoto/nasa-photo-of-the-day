@@ -9,16 +9,16 @@ import "./App.css";
 function App() {
 
   const [apiCallError, setApiCallError] = useState(null);
-  const [apiInfo, setApiInfo] = useState({ image: "", credit: "", title: "", text: "" });
+  const [apiInfo, setApiInfo] = useState({ image: "", date: "", title: "", text: "" });
 
   useEffect(() => {
     axios
-      .get("https://api.nasa.gov/planetary/apod?api_key=NNKOjkoul8n1CH18TWA9gwngW1s1SmjESPjNoUFo+")
+      .get("https://api.nasa.gov/planetary/apod?api_key=NNKOjkoul8n1CH18TWA9gwngW1s1SmjESPjNoUFo")
       .then(response => {
         const axiosApiReturnData = response.data;
         setApiInfo({
           image: axiosApiReturnData.hdurl,
-          credit: axiosApiReturnData.copyright,
+          date: axiosApiReturnData.date,
           title: axiosApiReturnData.title,
           text: axiosApiReturnData.explanation
         });
@@ -34,8 +34,8 @@ function App() {
 
   return (
     <div className="App">
-      <Title titleValue={apiInfo.title} />
-      <Date dateValue={apiInfo.credit} />
+      <Date dateValue={apiInfo.date} />
+      <Title titleValue={apiInfo.title} />      
       <Image imageUrl={apiInfo.image} />
       <Explanation apodShortExplanation={apiInfo.text} />
     </div>
