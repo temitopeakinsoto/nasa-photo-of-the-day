@@ -1,5 +1,6 @@
 import React from "react";
-import Image from "./image";
+import Image from "./Image";
+import Title from "./Title";
 import "./App.css";
 
 function App() {
@@ -9,8 +10,9 @@ function App() {
         Read through the instructions in the README.md file to build your NASA
         app! Have fun 🚀!
       </p>
+      <Title />
+      <Image imageUrl=""/>
 
-      <Image />
     </div>
   );
 }

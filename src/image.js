@@ -1,8 +1,9 @@
 import React from 'react';
 
-function Image () {
+function Image (props) {
+    const {imageUrl} = props;
     return(
-        <div>Hello</div>
+        <img src ={imageUrl} alt="NASA IMAGE FILE"></img>
     );
 }
 
