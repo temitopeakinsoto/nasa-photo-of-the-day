@@ -1,10 +1,20 @@
 import React, { useState, useEffect } from "react";
+import styled from 'styled-components';
 import axios from "axios";
 import Image from "./Image";
 import Title from "./Title";
 import Date from "./Date";
 import Explanation from "./Explanation";
 import "./App.css";
+
+const StyledParentDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  background-color: aliceblue;
+  margin: 10px auto;
+
+`
 
 function App() {
 
@@ -33,12 +43,12 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <StyledParentDiv className="App">
       <Date dateValue={apiInfo.date} />
       <Title titleValue={apiInfo.title} />      
       <Image imageUrl={apiInfo.image} />
       <Explanation apodShortExplanation={apiInfo.text} />
-    </div>
+    </StyledParentDiv>
   )
 }
 
