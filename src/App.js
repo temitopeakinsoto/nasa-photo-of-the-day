@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "./Image";
 import Title from "./Title";
+import Date from "./Date";
 import "./App.css";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         app! Have fun 🚀!
       </p>
       <Title />
+      <Date dateValue="Hello date"/>
       <Image imageUrl=""/>
 
     </div>
